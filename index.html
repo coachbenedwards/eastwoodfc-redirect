@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eastwood FC tickets</title>
+<script>
+// HOME GAMES - add the next one at the bottom. Each link is used up to and including its match day.
+var GAMES = [
+  { date: "2026-10-13", url: "https://app.fanbaseclub.com/fixture/eastwoodfc/23383" }, // Cotgrave
+  { date: "2026-10-31", url: "https://app.fanbaseclub.com/fixture/eastwoodfc/23382" }  // Newark Town
+];
+var FALLBACK = "https://app.fanbaseclub.com/club/eastwoodfc";
+var today = new Date().toISOString().slice(0, 10);
+var target = FALLBACK;
+for (var i = 0; i < GAMES.length; i++) { if (GAMES[i].date >= today) { target = GAMES[i].url; break; } }
+location.replace(target);
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://app.fanbaseclub.com/club/eastwoodfc"></noscript>
+</head>
+<body style="background:#0a0a0b;color:#ededf0;font-family:system-ui,sans-serif;text-align:center;padding-top:20vh">
+<p>Taking you to Eastwood FC tickets…</p>
+</body>
+</html>
